@@ -225,6 +225,22 @@ public class Game {
 
                 result="O wins";
             }
+        }else{
+            boolean  tie=true;
+            for (int i = 0; i < grid.length; i++) {
+                for (int j = 0; j < grid.length; j++) {
+                    if(grid[i][j] == '-'){
+                        tie=false;
+                        break;
+                    }
+                }
+                if(!tie){
+                    break;
+                }
+            }
+            if(tie){
+                result="tie";
+            }
         }
         return result;
     }
